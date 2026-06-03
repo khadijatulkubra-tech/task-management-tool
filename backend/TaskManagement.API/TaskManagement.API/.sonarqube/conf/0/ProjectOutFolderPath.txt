@@ -1,0 +1,1 @@
+D:\task-management-tool\backend\TaskManagement.API\TaskManagement.API\.sonarqube\out\0
