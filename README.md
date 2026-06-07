@@ -25,6 +25,9 @@ A full-stack web application for managing tasks built with ASP.NET Core and Reac
 - Due Dates Assignment
 - Admin Dashboard (view & manage all users tasks)
 - User Dashboard (personal task stats)
+- Admin can assign tasks to any user
+- Task List with Status & Priority filters
+- Task editing by user (title, description, category, priority, due date)
 - Global Exception Handling Middleware
 - Application Logging with Serilog
 - Unit Tests (8 tests passing)
@@ -128,6 +131,7 @@ pass : aliali12#@
 | GET | /api/Tasks/{id} | Get task by ID |
 | PUT | /api/Tasks/{id} | Update task |
 | DELETE | /api/Tasks/{id} | Delete task |
+| POST | /api/Tasks/assign?userId={id} | Assign task to user (Admin only) |
 
 ### Users (Admin only)
 | Method | Endpoint | Description |

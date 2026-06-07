@@ -61,5 +61,13 @@ namespace TaskManagement.API.Controllers
             if (!result) return NotFound();
             return Ok("Task deleted!");
         }
+        [HttpPost("assign")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> AssignTask(CreateTaskDTO dto, [FromQuery] int userId)
+        {
+            var task = await _taskService.CreateTask(dto, userId);
+            return Ok(task);
+        }
+
     }
 }
